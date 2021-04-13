@@ -1,3 +1,4 @@
+
 var result = document.querySelector('.result')
 
 async function check() { //для проверки совпадения паролей
@@ -5,6 +6,12 @@ async function check() { //для проверки совпадения паро
     else 
     alert('Пароли не совпадают');
         result.innerHTML += `
-            <p>Пароли не совпадают!!!!</p>    
+            <p>Пароли не совпадают</p>    
     `;
 }
+const menuBurger = document.querySelector('.sign-btn');
+const navMain = document.querySelector('.sign-form');
+
+menuBurger.addEventListener('click', (Event) => {
+    navMain.classList.toggle('sign-form-active');
+}); 
