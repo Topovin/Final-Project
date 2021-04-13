@@ -1,3 +1,6 @@
+body {
+    font-family: 'Open Sans Bold', arial;
+}
 #select-genre {
     width: 190px;
     height: 100px;
