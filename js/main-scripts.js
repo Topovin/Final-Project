@@ -9,7 +9,7 @@ async function check() { //для проверки совпадения паро
             <p>Пароли не совпадают</p>    
     `;
 }
-const menuBurger = document.querySelector('.sign-btn');
+const menuBurger = document.querySelector('.sign-btn'); //для выезжания окошка при нажатии на кнопку "Войти"
 const navMain = document.querySelector('.sign-form');
 
 menuBurger.addEventListener('click', (Event) => {
