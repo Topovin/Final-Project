@@ -1,0 +1,9 @@
+#select-genre {
+    width: 190px;
+    height: 100px;
+    overflow-y: auto;
+    -webkit-user-select: none;
+}
+textarea {
+    resize: none;
+}
