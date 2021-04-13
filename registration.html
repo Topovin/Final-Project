@@ -10,22 +10,40 @@
     <link href="https://allfont.ru/allfont.css?fonts=open-sans-bold" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">На главную</button>
+    <div class="button-home">
+        <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">На главную</button>
+    </div>
     <div class="reg-inputs">
         <form>
-            <p>Регистрация</p>
-            <p>Email:</p>
-            <p><input type="text" id="email"></p>
-            <p>Логин:</p>
-            <p><input type="text" id="login"></p>
-            <p>Пароль:</p>
-            <p><input type="password" name="password" id="password"></p>
-            <p>Повторите пароль:</p>
-            <p><input type="password" name="password" id="repeat-password"></p>
+            <h1>Регистрация</h1>
+            <div class="name">
+                <input id="name" placeholder="Имя" type="text">
+                <input id="name" placeholder="Фамилия" type="text">
+            </div>
+            <input type="text" placeholder="Email" id="email">
+            <div class="login">
+                <input type="text" placeholder="Логин">
+                <div>
+                    <p>Выберите пол:</p>
+                    <span>
+                        <input id="men"  type="checkbox"><label for="men">Мужской</label><br>     
+                        <input id="women" type="checkbox"><label for="women">Женский</label>          
+                    </span>
+                        
+                </div>
+            </div>
+            <div>
+                <input placeholder="Пароль" type="password" name="password" id="password">
+                <input placeholder="Повторите пароль" type="password" name="password" id="repeat-password">
+            </div>
             <div class="result"></div>
-            <p>Выберите пол:</p>
-            <p>Мужчина<input type="radio" id="man" name="field"><label for="man"></label>
-               Женщина<input type="radio" id="woman" name="field"><label for="woman"></label></p>
+
+
+
+
+
+
+            
             <p>Предпочитаемые жанры:</p>
             <div id="select-genre">
         
@@ -47,7 +65,7 @@
                   
             </div>
             <p>О себе:</p>
-            <p><textarea rows="10" cols="45" name="about-yourself"></textarea></p>
+            <textarea  name="about-yourself"></textarea>
             <p><button type="submit" onclick="check()">Отправить</button></p>
         </form>
     </div>
