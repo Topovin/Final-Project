@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
+    <link href="https://allfont.ru/allfont.css?fonts=lobster" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="style/registration.css">
+    
 </head>
 <body>
     <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">На главную</button>
@@ -22,6 +24,7 @@
             <p><input type="password" name="password" id="password"></p>
             <p>Повторите пароль:</p>
             <p><input type="password" name="password" id="repeat-password"></p>
+            <div class="result"></div>
             <p>Выберите пол:</p>
             <p>Мужчина<input type="radio" id="man" name="field"><label for="man"></label>
                Женщина<input type="radio" id="woman" name="field"><label for="woman"></label></p>
@@ -50,6 +53,13 @@
             <p><button type="submit" onclick="check()">Отправить</button></p>
         </form>
     </div>
+
+
+
+
+
+
+    
 </body>
 </html>
 <script src="js/main-scripts.js"></script>
