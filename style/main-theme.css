@@ -1,23 +1,84 @@
-
+body {
+    margin: 0 0 0 0;
+}
 .up-menu {
+    position: absolute;
     width: 100%;
     height: 45px;
-    background-color: aquamarine;
+    background-color: rgb(142, 49, 230);
     font-family: 'Open Sans', arial;
+    z-index: 1;
 }
 .up-menu > button { /*стилизайия кнопок в верхнем меню навигации*/
     height: 45px;
     width: auto;
     font-size: 125%;
-    margin-right: -5px;
     border-radius: 0px;
     border: none;
-    background-color: rgb(142, 49, 230);
+    background-color: rgb(132, 24, 233);
     color: white;
     font-family: 'Open Sans', arial;
 }
 .up-menu > button:focus {
     outline: none;
 }
+.up-menu > button:hover {
+    background-color: rgb(255, 154, 71);
+    transition: 0.4s;
+    border-radius: 10px;
+}
+#main {
+    margin-left: 10px;
+}
+.right-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.right-btn > button {
+    height: 45px;
+    width: auto;
+    font-size: 125%;
+    border-radius: 0px;
+    border: none;
+    background-color: rgb(132, 24, 233);
+    color: white;
+    font-family: 'Open Sans', arial;
+}
+.right-btn > button:focus {
+    outline: none;
+}
+.right-btn > button:hover {
+    background-color: rgb(255, 154, 71);
+    transition: 0.4s;
+    border-radius: 10px;
+}
+.sign-form {
+    position: fixed;
+    display: flex;
+    background-color: tomato;
+    width: 221px;
+    height: 150px;
+    top: -150px;
+    transition: 1s all ease;
+    right: 0;
+    z-index: 0;
+}
+.sign-form-active {
+    transition: 1s all ease;
+    top: 45px;
+}
+.sign-form > form > input {
+    margin-top: 10px;
+    width: 150px;
+    height: 15px;
+    margin-left: 30.25px;
+}
+.sign-form > form > button {
+    position: absolute;
+    bottom: 0;
+}
+
+
 
 
