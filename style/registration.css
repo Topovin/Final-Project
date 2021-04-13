@@ -14,3 +14,11 @@ textarea {
     color: red;
     font-family: 'Lobster', arial;
 }
+.reg-inputs form{
+    width: 50%;
+    height: 1000px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    
+} 
