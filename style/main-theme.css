@@ -105,8 +105,22 @@ body { /*Убирает отступ по краям экрана*/
     text-decoration: none;
     color: slateblue;
 }
-
-
+.settings-form {
+    position: fixed;
+    display: flex;
+    width: 100px;
+    height: 75px;
+    background-color: rgb(255, 154, 71);
+    transition: 1s all ease;
+    right: 404px;
+    z-index: 0;
+    border-radius: 5px;
+    top: -30px;
+}
+.settings-form-active {
+    transition: 1s all ease;
+    top: 40px;
+}
 
 
 
