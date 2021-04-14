@@ -1,7 +1,7 @@
-body {
+body { /*Убирает отступ по краям экрана*/
     margin: 0 0 0 0;
 }
-.up-menu {
+.up-menu {  /*Верхнее меню*/
     position: absolute;
     width: 100%;
     height: 45px;
@@ -26,11 +26,12 @@ body {
     background-color: rgb(255, 154, 71);
     transition: 0.4s;
     border-radius: 10px;
+    box-shadow: inset 1px 1px 10px -1px
 }
-#main {
+#main { /*Стилизация кноки "Главная"*/
     margin-left: 10px;
 }
-.right-btn {
+.right-btn { /*Стилизация кнопок в верхнем меню навигации с правой стороны*/
     position: absolute;
     top: 0;
     right: 10px;
@@ -52,32 +53,59 @@ body {
     background-color: rgb(255, 154, 71);
     transition: 0.4s;
     border-radius: 10px;
+    box-shadow: inset 1px 1px 10px -1px;
 }
-.sign-form {
+.sign-form { /*Стилизация выдвижного окошка при нажатии на кнопку "Войти"*/
     position: fixed;
     display: flex;
-    background-color: tomato;
+    background-color: rgb(255, 154, 71);
     width: 221px;
     height: 150px;
     top: -150px;
     transition: 1s all ease;
     right: 0;
     z-index: 0;
+    border-radius: 5px;
 }
 .sign-form-active {
     transition: 1s all ease;
-    top: 45px;
+    top: 40px;
 }
 .sign-form > form > input {
-    margin-top: 10px;
+    margin-top: 20px;
     width: 150px;
     height: 15px;
     margin-left: 30.25px;
+    border: none;
+    border-bottom: 1px solid rgb(132, 24, 233);
+    background: none;
 }
-.sign-form > form > button {
-    position: absolute;
-    bottom: 0;
+.sign-form > form > input:focus {
+    outline: none;
 }
+.sign-form-btn {
+    margin-top: 25px;
+    margin-left: 10px;
+    border: none;
+    background-color: rgb(132, 24, 233);
+    color: white;
+}
+.sign-form-btn:hover {
+    background-color: rgb(255, 154, 71);
+    box-shadow: inset 1px 1px 10px -1px;
+    transition: 0.4s;
+    border-radius: 10px;
+    color: black;
+}
+.sign-form-btn:focus {
+    outline: none;
+}
+.sign-form-forgot-password {
+    padding-left: 30px;
+    text-decoration: none;
+    color: slateblue;
+}
+
 
 
 
