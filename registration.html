@@ -12,32 +12,30 @@
 </head>
 <body>
     <div class="registration">
-        <div>
-            <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">Назад</button>
-            <p>Регистрация аккаунта</p>
-        </div> 
-        <div>
-            <input placeholder="Логин" type="text" id="login">
-            <span>
-                <p>Выберите пол:</p>
-                <p>
-                    <label for="man"><input type="radio" id="man" name="field">Мужчина</label>
-                    <label for="woman"><input type="radio" id="woman" name="field">Женщина</label>
-                </p>
-            </span>
-        </div>
-        <p><input placeholder="Email" type="email" id="email"></p>        
-        <div>
-            <p>Пароль:</p>
-            <p><input type="password" name="password" id="password"></p>
-            <p>Повторите пароль:</p>
-            <p><input type="password" name="password" id="repeat-password"></p>
-            <div class="result"></div>
-        </div>
-                
-       
-
-                
+        <div class="sub-menu">
+            <div  id="div-row">
+                <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">Назад</button>
+                <p>Регистрация аккаунта</p>
+            </div> 
+            <div  id="div-row">
+                <input placeholder="Логин" type="text" id="login">
+                <span>
+                    <p>Выберите пол:</p>
+                    <p>
+                        <label for="man"><input type="radio" id="man" name="field">Мужчина</label>
+                        <label for="woman"><input type="radio" id="woman" name="field">Женщина</label>
+                    </p>
+                </span>
+            </div>
+            <div id="div-row">
+                <input placeholder="Email" type="email" id="email">   
+            </div>
+            <div  id="div-row">
+                <p><input placeholder="Введите пароль" type="password" name="password" id="password"></p>
+                <p><input placeholder="Введите пароль еще раз" type="password" name="password" id="repeat-password"></p>
+                <div class="result"></div>
+            </div>
+            <div id="other">
                 <p>Предпочитаемые жанры:</p>
                 <div id="select-genre">
                     <form>
@@ -61,7 +59,12 @@
                 <p>О себе:</p>
                 <p><textarea rows="10" cols="45" name="about-yourself"></textarea></p>
                 <p><button type="submit" onclick="check()">Отправить</button></p>
-                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+        <div class="sub-menu">
+            <i id="fa-lock" class="fas fa-lock"></i>
+        </div>
+        
     </div>
     
 
