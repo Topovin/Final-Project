@@ -7,43 +7,30 @@
     <title>Регистрация</title>
     <link href="https://allfont.ru/allfont.css?fonts=lobster" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="style/registration.css">
-    <link href="https://allfont.ru/allfont.css?fonts=open-sans-bold" rel="stylesheet" type="text/css" />
+    
 </head>
 <body>
-    <div class="button-home">
-        <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">На главную</button>
+    <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">На главную</button>
+    <div class="reg-name">
+        <p>Регистрация</p>
     </div>
     <div class="reg-inputs">
         <form>
-            <h1>Регистрация</h1>
-            <div class="name">
-                <input id="name" placeholder="Имя" type="text">
-                <input id="name" placeholder="Фамилия" type="text">
-            </div>
-            <input type="text" placeholder="Email" id="email">
-            <div class="login">
-                <input type="text" placeholder="Логин">
-                <div>
-                    <p>Ваш пол:</p>
-                    <span>
-                        <label><input class="checkbox" name="field" type="radio">Мужской</label>
-                        <label><input class="checkbox" name="field" type="radio">Женский</label>
-                    </span>     
-                </div>
-            </div>
-            <div>
-                <input placeholder="Пароль" type="password" name="password" id="password">
-                <input placeholder="Повторите пароль" type="password" name="password" id="repeat-password">
-            </div>
+            <p>Email:</p>
+            <p><input type="email" id="email"></p>
+            <p>Логин:</p>
+            <p><input type="text" id="login"></p>
+            <p>Пароль:</p>
+            <p><input type="password" name="password" id="password"></p>
+            <p>Повторите пароль:</p>
+            <p><input type="password" name="password" id="repeat-password"></p>
             <div class="result"></div>
-
-
-
-
-            
+            <p>Выберите пол:</p>
+            <p>Мужчина<input type="radio" id="man" name="field"><label for="man"></label>
+               Женщина<input type="radio" id="woman" name="field"><label for="woman"></label></p>
             <p>Предпочитаемые жанры:</p>
             <div id="select-genre">
-        
+                <form>
                     <label>Боевики<input type="checkbox" name="boevik" id=""></label><br>
                     <label>Военные<input type="checkbox" name="voenniy" id=""></label><br>
                     <label>Детективы<input type="checkbox" name="detective" id=""></label><br>
@@ -59,14 +46,20 @@
                     <label>Ужасы<input type="checkbox" name="ugasi" id=""></label><br>
                     <label>Фантастика<input type="checkbox" name="fantastika" id=""></label><br>
                     <label>Фэнтези<input type="checkbox" name="fentesi" id=""></label><br> 
-                  
+                </form>   
             </div>
             <p>О себе:</p>
-            <textarea  name="about-yourself"></textarea>
-            <p><button  onclick="check()">Отправить</button></p>
+            <p><textarea rows="10" cols="45" name="about-yourself"></textarea></p>
+            <p><button type="submit" onclick="check()">Отправить</button></p>
         </form>
     </div>
 
+
+
+
+
+
+    
 </body>
 </html>
 <script src="js/main-scripts.js"></script>
