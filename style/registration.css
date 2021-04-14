@@ -13,5 +13,16 @@ textarea {
    
 }
 body{
-     font-family: 'Lobster', arial;
+    font-family: 'Lobster', arial;
+}
+button{
+    font-family: 'Lobster', arial;
+}
+.registration{
+    width: 50%;
+    height: auto;
+    border: 1px solid red;
+    margin-right: auto;
+    margin-left: auto;
+
 }

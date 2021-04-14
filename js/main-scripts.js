@@ -5,7 +5,7 @@ var result = document.querySelector('.result')
     else {
         alert('Пароли не совпадают');
         result.innerHTML += `
-            <p>Пароли не совпадают</p>    
+            <p>Пароли не совпадают!!!!</p>    
     `;
     }
     
