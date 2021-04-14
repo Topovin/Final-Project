@@ -7,7 +7,8 @@
     <title>Final Project</title>
     <link rel="stylesheet" href="style/dark-theme.css">
     <link rel="stylesheet" href="style/main-theme.css">
-    <link href="https://allfont.ru/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" /> <!--font-family: 'Open Sans', arial;-->>
+    <link href="https://allfont.ru/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" /> <!--font-family: 'Open Sans', arial;-->
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
 </head>
 <body>
     <div class="sign-form">
@@ -20,12 +21,13 @@
     </div>
     <nav>
         <div class="up-menu">
-            <button id="main">Главная</button>
+            <button id="main" onclick="window.location.href = 'main-page.html';">Главная</button>
             <button>Новинки 2021</button>
             <button>Анонсы</button>
             <button>Оформить подписку</button>
             <button>Отзывы</button>
                 <div class="right-btn">
+                    <button id="settings-btn"><i class="fas fa-cog"></i></button>
                     <button>О нас</button>
                     <button>Контакты</button>
                     <button class="sign-btn">Войти</button>
