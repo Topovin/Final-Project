@@ -1,7 +1,7 @@
 
 var result = document.querySelector('.result')
 
-async function check() { //для проверки совпадения паролей
+ function check() { //для проверки совпадения паролей
     if (document.querySelector('#password').value === document.querySelector('#repeat-password').value);
     else 
     alert('Пароли не совпадают');
@@ -9,6 +9,20 @@ async function check() { //для проверки совпадения паро
             <p>Пароли не совпадают</p>    
     `;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const menuBurger = document.querySelector('.sign-btn');
 const navMain = document.querySelector('.sign-form');
 
