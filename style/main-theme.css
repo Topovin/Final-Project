@@ -4,32 +4,88 @@ body { /*Убирает отступ по краям экрана*/
 .up-menu {  /*Верхнее меню*/
     position: absolute;
     width: 100%;
-    height: 45px;
+    height: 75px;
     background-color: rgb(142, 49, 230);
     font-family: 'Open Sans', arial;
     z-index: 1;
 }
-.up-menu > button { /*стилизайия кнопок в верхнем меню навигации*/
+.down-menu {
+    position: fixed;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    top: 90px;
+    width: 93%;
+    height: 45px;
+    background: rgb(154, 24, 240);
+    margin-left: auto;
+    display: flex;
+    transition: 1s all ease;
+    right: -1750px;
+}
+.down-menu-active {
+    transition: 0.7s all ease;
+    right: 0;
+}
+#i {
+    transition: transform 0.7s ease-in-out;
+}
+.rotate {
+    transform: rotate(180deg);
+  }
+.down-menu > button { /*стилизайия кнопок в верхнем меню навигации*/
+    border-radius: 35px;
     height: 45px;
     width: auto;
     font-size: 125%;
-    border-radius: 0px;
     border: none;
     background-color: rgb(132, 24, 233);
     color: white;
     font-family: 'Open Sans', arial;
 }
-.up-menu > button:focus {
+#news {
+    margin-left: 35px;
+}
+.down-menu > .arrow > i {
+    color: white;
+    position: absolute;
+}
+.arrow {
+    width: 30px;
+    height: 45px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    line-height: 1.25;
+}
+.down-menu > button:focus {
     outline: none;
 }
-.up-menu > button:hover {
+.down-menu > button:hover {
     background-color: rgb(255, 154, 71);
     transition: 0.4s;
     border-radius: 10px;
     box-shadow: inset 1px 1px 10px -1px
 }
 #main { /*Стилизация кноки "Главная"*/
-    margin-left: 10px;
+    border-radius: 35px;
+    height: 75px;
+    width: auto;
+    font-size: 125%;
+    border: none;
+    background-color: rgb(132, 24, 233);
+    color: white;
+    font-family: 'Open Sans', arial;
+}
+#main:focus {
+    outline: none;
+}
+#main:hover {
+    background-color: rgb(255, 154, 71);
+    transition: 0.4s;
+    border-radius: 50px;
+    box-shadow: inset 1px 1px 10px -1px
 }
 .right-btn { /*Стилизация кнопок в верхнем меню навигации с правой стороны*/
     position: absolute;
