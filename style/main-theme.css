@@ -26,15 +26,6 @@ body { /*Убирает отступ по краям экрана*/
     transition: 0.7s all ease;
     right: 0;
 }
-#i {
-    transition: transform 0.7s ease-in-out;
-}
-.rotate {
-    transform: rotate(180deg);
-  }
-.rotate1 {
-    transform: rotate(-180deg);
-}
 .down-menu > button { /*стилизайия кнопок в верхнем меню навигации*/
     border-radius: 35px;
     height: 45px;
@@ -180,8 +171,27 @@ body { /*Убирает отступ по краям экрана*/
     transition: 1s all ease;
     top: 40px;
 }
-
-
+#string {
+    display: none;
+}
+#string-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 45px;
+    transition: transform 0.7s;
+    color: white;
+    margin-left: -4px;
+}
+#string:checked + label {
+    transform: rotate(-180deg);
+}
 
 
 

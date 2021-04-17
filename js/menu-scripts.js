@@ -10,16 +10,10 @@ const navMain1 = document.querySelector('.settings-form');
 menuBurger1.addEventListener('click', (Event) => {
     navMain1.classList.toggle('settings-form-active');
 }); 
-const menuBurger2 = document.querySelector('.arrow'); //для выезжания окошка при нажатии на кнопку "Настройки"
+const menuBurger2 = document.querySelector('#string'); //для выезжания окошка при нажатии на кнопку "Настройки"
 const navMain2 = document.querySelector('.down-menu');
 
 menuBurger2.addEventListener('click', (Event) => {
     navMain2.classList.toggle('down-menu-active');
 }); 
  
-i.onclick = function(){
-    this.classList.toggle('rotate')
-  }
-i.onclick = function(){
-    thissrf.classList.toggle('rotate1')
-} 
