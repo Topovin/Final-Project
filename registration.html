@@ -5,68 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
     <link href="https://allfont.ru/allfont.css?fonts=lobster" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="style/registration.css">
-    <link href="https://allfont.ru/allfont.css?fonts=open-sans-bold" rel="stylesheet" type="text/css" />
+    
 </head>
 <body>
-    <div class="button-home">
-        <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">На главную</button>
-    </div>
-    <div class="reg-inputs">
-        <form>
-            <h1>Регистрация</h1>
-            <div class="name">
-                <input id="name" placeholder="Имя" type="text">
-                <input id="name" placeholder="Фамилия" type="text">
+    <div class="registration">
+        <div class="sub-menu">
+            <div  id="div-row">
+                <button onclick="window.location.href = 'main-page.html';" id="on-main-page-btn">Назад</button>
+                <p>Регистрация аккаунта</p>
+            </div> 
+            <div  id="div-row">
+                <input placeholder="Логин" type="text" id="login">
+                <span>
+                    <p>Выберите пол:</p>
+                    <p>
+                        <label for="man"><input type="radio" id="man" name="field">Мужчина</label>
+                        <label for="woman"><input type="radio" id="woman" name="field">Женщина</label>
+                    </p>
+                </span>
             </div>
-            <input type="text" placeholder="Email" id="email">
-            <div class="login">
-                <input type="text" placeholder="Логин">
-                <div>
-                    <p>Ваш пол:</p>
-                    <span>
-                        <label><input class="checkbox" name="field" type="radio">Мужской</label>
-                        <label><input class="checkbox" name="field" type="radio">Женский</label>
-                    </span>     
+            <div id="div-row">
+                <input placeholder="Email" type="email" id="email">   
+            </div>
+            <div  id="div-row">
+                <p><input placeholder="Введите пароль" type="password" name="password" id="password"></p>
+                <p><input placeholder="Введите пароль еще раз" type="password" name="password" id="repeat-password"></p>
+                <div class="result"></div>
+            </div>
+            <div id="other">
+                <p>Предпочитаемые жанры:</p>
+                <div id="select-genre">
+                    <form>
+                        <label>Боевики<input type="checkbox" name="boevik" id=""></label><br>
+                        <label>Военные<input type="checkbox" name="voenniy" id=""></label><br>
+                        <label>Детективы<input type="checkbox" name="detective" id=""></label><br>
+                        <label>Документальные<input type="checkbox" name="documentary" id=""></label><br>
+                        <label>Драмы<input type="checkbox" name="drama" id=""></label><br>
+                        <label>Комедии<input type="checkbox" name="komediya" id=""></label><br>
+                        <label>Мелодрамы<input type="checkbox" name="melo-drama" id=""></label><br>
+                        <label>Мультфильмы<input type="checkbox" name="multfilmi" id=""></label><br>
+                        <label>Приключения<input type="checkbox" name="priklucheniya" id=""></label><br>
+                        <label>Спортивные<input type="checkbox" name="sportivnie" id=""></label><br>
+                        <label>Интерактивное кино<input type="checkbox" name="interactivnoe-kino" id=""></label><br>
+                        <label>Триллеры<input type="checkbox" name="trilleri" id=""></label><br>
+                        <label>Ужасы<input type="checkbox" name="ugasi" id=""></label><br>
+                        <label>Фантастика<input type="checkbox" name="fantastika" id=""></label><br>
+                        <label>Фэнтези<input type="checkbox" name="fentesi" id=""></label><br> 
+                    </form>   
                 </div>
+                <p>О себе:</p>
+                <p><textarea rows="10" cols="45" name="about-yourself"></textarea></p>
+                <p><button type="submit" onclick="check()">Отправить</button></p>
             </div>
-            <div>
-                <input placeholder="Пароль" type="password" name="password" id="password">
-                <input placeholder="Повторите пароль" type="password" name="password" id="repeat-password">
-            </div>
-            <div class="result"></div>
-
-
-
-
-            
-            <p>Предпочитаемые жанры:</p>
-            <div id="select-genre">
+        </div>
+        <div class="sub-menu">
+            <i id="fa-lock" class="fas fa-lock"></i>
+        </div>
         
-                    <label>Боевики<input type="checkbox" name="boevik" id=""></label><br>
-                    <label>Военные<input type="checkbox" name="voenniy" id=""></label><br>
-                    <label>Детективы<input type="checkbox" name="detective" id=""></label><br>
-                    <label>Документальные<input type="checkbox" name="documentary" id=""></label><br>
-                    <label>Драмы<input type="checkbox" name="drama" id=""></label><br>
-                    <label>Комедии<input type="checkbox" name="komediya" id=""></label><br>
-                    <label>Мелодрамы<input type="checkbox" name="melo-drama" id=""></label><br>
-                    <label>Мультфильмы<input type="checkbox" name="multfilmi" id=""></label><br>
-                    <label>Приключения<input type="checkbox" name="priklucheniya" id=""></label><br>
-                    <label>Спортивные<input type="checkbox" name="sportivnie" id=""></label><br>
-                    <label>Интерактивное кино<input type="checkbox" name="interactivnoe-kino" id=""></label><br>
-                    <label>Триллеры<input type="checkbox" name="trilleri" id=""></label><br>
-                    <label>Ужасы<input type="checkbox" name="ugasi" id=""></label><br>
-                    <label>Фантастика<input type="checkbox" name="fantastika" id=""></label><br>
-                    <label>Фэнтези<input type="checkbox" name="fentesi" id=""></label><br> 
-                  
-            </div>
-            <p>О себе:</p>
-            <textarea  name="about-yourself"></textarea>
-            <p><button  onclick="check()">Отправить</button></p>
-        </form>
     </div>
+    
 
+
+
+
+
+
+    
 </body>
 </html>
 <script src="js/main-scripts.js"></script>
