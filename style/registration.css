@@ -18,7 +18,9 @@ button{
     font-family: 'Lobster', arial;
 }
 .registration{
-    width: 50%;
+    width: 100%;
+    min-width: 300px;
+    max-width: 700px;
     height: auto;
     border: 1px solid red;
     margin-right: auto;
@@ -30,6 +32,7 @@ button{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     margin-right: auto;
     width: 100%;
     border: 1px solid gray;
@@ -42,11 +45,40 @@ button{
     border: 1px solid gray;
 }
 #fa-lock{
-   font-size: 80%;
+   font-size: 2000%;
    color: red;
-   position: absolute;
-
 }
 .sub-menu{
     width: 50%;
 }
+<<<<<<< HEAD
+=======
+.sub-menu button{
+    width: 20%;
+    height: 30px;
+}
+.sub-menu .margin-left{
+    margin-left: 5%;
+}
+#lock-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#lock-info p{
+    font-size: 200%;
+    color: red;
+}
+.registration button{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 9%;
+}
+.registration button:hover{
+    background-color: rgb(202, 69, 69);
+    color: black;
+    border: none;
+}
+>>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
