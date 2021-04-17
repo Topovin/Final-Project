@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
-    <link rel="stylesheet" href="style/dark-theme.css">
+
     <link rel="stylesheet" href="style/main-theme.css">
+    <link rel="stylesheet" href="style/dark-theme.css">
     <link href="https://allfont.ru/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" /> <!--font-family: 'Open Sans', arial;-->
     <link rel="stylesheet" href="font-awesome/css/all.min.css">
 </head>
@@ -21,7 +22,11 @@
     </div>
     <div class="settings-form">
         <div class="theme-selector">
-            <input type="checkbox" id="sun-moon" />
+            <input type="checkbox" id="sun-moon" name="selector"/>
+                <div class="sun-moon">
+                     <label for="selector" id="sun-selector"><i class="far fa-sun active"></i></label>
+                  <!--  <i class="far fa-moon hiden"></i> -->
+                </div>
         </div>
     </div>
     <nav>
@@ -29,6 +34,8 @@
             <button id="main" onclick="window.location.href = 'main-page.html';">Главная</button>
                 <div class="right-btn">
                     <button class="settings-btn"><i class="fas fa-cog"></i></button>
+                    <button>О нас</button>
+                    <button>Контакты</button>
                     <button class="sign-btn">Войти</button>
                     <button onclick="window.location.href = 'registration.html';">Регистрация</button>
                 </div>
@@ -45,4 +52,5 @@
     </nav>
 </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="js/menu-scripts.js"></script>

@@ -194,8 +194,16 @@ body { /*Убирает отступ по краям экрана*/
 #string:checked + label {
     transform: rotate(-180deg);
 }
-
-
-
+.theme-selector{
+    margin-top: 20px;
+    width: 100%;
+    height: 20px;
+}
+#sun-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 
