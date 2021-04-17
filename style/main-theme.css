@@ -109,25 +109,18 @@ body { /*Убирает отступ по краям экрана*/
     position: fixed;
     display: flex;
     width: 100px;
-    height: 70px;
+    height: 75px;
     background-color: rgb(255, 154, 71);
     transition: 1s all ease;
     right: 404px;
     z-index: 0;
     border-radius: 5px;
     top: -30px;
-    padding-top: 5px;
 }
 .settings-form-active {
     transition: 1s all ease;
     top: 40px;
 }
-.theme-selector{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 20px;
-}
+
 
 
