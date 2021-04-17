@@ -9,5 +9,44 @@ textarea {
 }
 .result p{
     color: red;
+   
+}
+body{
     font-family: 'Lobster', arial;
+}
+button{
+    font-family: 'Lobster', arial;
+}
+.registration{
+    width: 50%;
+    height: auto;
+    border: 1px solid red;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+#div-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: auto;
+    width: 100%;
+    border: 1px solid gray;
+}
+#other{
+    display: flex;
+    flex-direction: column;
+ 
+    width: 100%;
+    border: 1px solid gray;
+}
+#fa-lock{
+   font-size: 80%;
+   color: red;
+   position: absolute;
+
+}
+.sub-menu{
+    width: 50%;
 }
