@@ -30,14 +30,16 @@
             <div id="div-row">
                 <input placeholder="Email" type="email" id="email">   
             </div>
-            <div  id="div-row">
-                <p><input placeholder="Введите пароль" type="password" name="password" id="password"></p>
-                <p><input placeholder="Введите пароль еще раз" type="password" name="password" id="repeat-password"></p>
+            <div   id="div-row">
+                <p>
+                    <input placeholder="Введите пароль" type="password" name="password" id="password">
+                    <input placeholder="Введите пароль еще раз" type="password" name="password" id="repeat-password">
+                </p>
                 <div class="result"></div>
             </div>
             <div id="other">
-                <p>Предпочитаемые жанры:</p>
-                <div id="select-genre">
+                <p class="margin-left">Предпочитаемые жанры:</p>
+                <div class="margin-left" id="select-genre">
                     <form>
                         <label>Боевики<input type="checkbox" name="boevik" id=""></label><br>
                         <label>Военные<input type="checkbox" name="voenniy" id=""></label><br>
@@ -56,13 +58,15 @@
                         <label>Фэнтези<input type="checkbox" name="fentesi" id=""></label><br> 
                     </form>   
                 </div>
-                <p>О себе:</p>
-                <p><textarea rows="10" cols="45" name="about-yourself"></textarea></p>
-                <p><button type="submit" onclick="check()">Отправить</button></p>
+                <textarea placeholder="Расскажите о себе" rows="10" cols="45" name="about-yourself"></textarea>
+                <p class="margin-left"><button type="submit" onclick="check()">Отправить</button></p>
             </div>
         </div>
-        <div class="sub-menu">
-            <i id="fa-lock" class="fas fa-lock"></i>
+        <div id="lock-info" class="sub-menu">
+            <i id="fa-lock" class="fal fa-lock"></i>
+            <p>
+                Ваши данные защищены
+            </p>
         </div>
         
     </div>
