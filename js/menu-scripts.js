@@ -10,12 +10,17 @@ const navMain1 = document.querySelector('.settings-form');
 menuBurger1.addEventListener('click', (Event) => {
     navMain1.classList.toggle('settings-form-active');
 }); 
+
 const menuBurger2 = document.querySelector('#string'); //для выезжания окошка при нажатии на кнопку "Настройки"
 const navMain2 = document.querySelector('.down-menu');
 
 menuBurger2.addEventListener('click', (Event) => {
     navMain2.classList.toggle('down-menu-active');
 }); 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
 const sun = document.querySelector('.far.fa-sun');
 const moon = document.querySelector('.far.fa-moon');
 const changeTheme = document.querySelector('#sun-moon');
@@ -34,6 +39,7 @@ changeTheme.addEventListener('click', (Event) =>{
         body.style.backgroundColor = 'white';
     }
 })
+<<<<<<< HEAD
 var header = $('.sign-form-active'),
 		scrollPrev = 0;
 
@@ -48,3 +54,5 @@ $(window).scroll(function() {
 	scrollPrev = scrolled;
 });
  
+=======
+>>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126

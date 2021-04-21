@@ -8,6 +8,8 @@ body { /*Убирает отступ по краям экрана*/
     background-color: rgb(142, 49, 230);
     font-family: 'Open Sans', arial;
     z-index: 1;
+    display: flex;  
+    align-items: center;
 }
 .down-menu {
     position: fixed;
@@ -165,18 +167,27 @@ body { /*Убирает отступ по краям экрана*/
     height: 75px;
     background-color: rgb(255, 154, 71);
     transition: 1s all ease;
+<<<<<<< HEAD
     right: 225px;
+=======
+    right: 223px;
+>>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
     z-index: 0;
     border-radius: 5px;
     top: -30px;
 }
 .settings-form-active {
+<<<<<<< HEAD
     visibility: visible;
     transition: 0.1s all ease;
     top: 55px;
 }
 .sign-form-active.out {
     transform: translateY(-500px);
+=======
+    transition: 1s all ease;
+    top: 55px;
+>>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
 }
 #string {
     display: none;
@@ -199,6 +210,7 @@ body { /*Убирает отступ по краям экрана*/
 #string:checked + label {
     transform: rotate(-180deg);
 }
+<<<<<<< HEAD
 .main-container {
     max-width: 1000px;
     min-width: 1000px;
@@ -210,5 +222,18 @@ body { /*Убирает отступ по краям экрана*/
 
 
 
+=======
+.theme-selector{
+    margin-top: 20px;
+    width: 100%;
+    height: 20px;
+}
+#sun-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+>>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
 
 
