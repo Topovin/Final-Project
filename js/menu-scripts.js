@@ -16,4 +16,35 @@ const navMain2 = document.querySelector('.down-menu');
 menuBurger2.addEventListener('click', (Event) => {
     navMain2.classList.toggle('down-menu-active');
 }); 
+const sun = document.querySelector('.far.fa-sun');
+const moon = document.querySelector('.far.fa-moon');
+const changeTheme = document.querySelector('#sun-moon');
+const icon = document.querySelector('.sun-moon');
+const body = document.body;
+
+changeTheme.addEventListener('click', (Event) =>{
+    if(document.querySelector('.far.fa-sun')){
+        icon.innerHTML = `
+        <i class="far fa-moon"></i>`
+        body.style.backgroundColor = 'black';
+    }
+    else{
+        icon.innerHTML = `
+        <i class="far fa-sun"></i>`
+        body.style.backgroundColor = 'white';
+    }
+})
+var header = $('.sign-form-active'),
+		scrollPrev = 0;
+
+$(window).scroll(function() {
+	var scrolled = $(window).scrollTop();
+ 
+	if ( scrolled > 100 && scrolled > scrollPrev ) {
+		header.addClass('out');
+	} else {
+		header.removeClass('out');
+	}
+	scrollPrev = scrolled;
+});
  

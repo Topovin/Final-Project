@@ -4,7 +4,7 @@ body { /*Убирает отступ по краям экрана*/
 .up-menu {  /*Верхнее меню*/
     position: absolute;
     width: 100%;
-    height: 75px;
+    height: 60px;
     background-color: rgb(142, 49, 230);
     font-family: 'Open Sans', arial;
     z-index: 1;
@@ -20,7 +20,7 @@ body { /*Убирает отступ по краям экрана*/
     margin-left: auto;
     display: flex;
     transition: 1s all ease;
-    right: -1750px;
+    right: -1730px;
 }
 .down-menu-active {
     transition: 0.7s all ease;
@@ -64,7 +64,7 @@ body { /*Убирает отступ по краям экрана*/
 }
 #main { /*Стилизация кноки "Главная"*/
     border-radius: 35px;
-    height: 75px;
+    height: 60px;
     width: auto;
     font-size: 125%;
     border: none;
@@ -87,7 +87,7 @@ body { /*Убирает отступ по краям экрана*/
     right: 10px;
 }
 .right-btn > button {
-    height: 45px;
+    height: 60px;
     width: auto;
     font-size: 125%;
     border-radius: 0px;
@@ -106,6 +106,7 @@ body { /*Убирает отступ по краям экрана*/
     box-shadow: inset 1px 1px 10px -1px;
 }
 .sign-form { /*Стилизация выдвижного окошка при нажатии на кнопку "Войти"*/
+    visibility: hidden;
     position: fixed;
     display: flex;
     background-color: rgb(255, 154, 71);
@@ -118,8 +119,9 @@ body { /*Убирает отступ по краям экрана*/
     border-radius: 5px;
 }
 .sign-form-active {
+    visibility: visible;
     transition: 1s all ease;
-    top: 40px;
+    top: 55px;
 }
 .sign-form > form > input {
     margin-top: 20px;
@@ -156,20 +158,25 @@ body { /*Убирает отступ по краям экрана*/
     color: slateblue;
 }
 .settings-form {
+    visibility: hidden;
     position: fixed;
     display: flex;
     width: 100px;
     height: 75px;
     background-color: rgb(255, 154, 71);
     transition: 1s all ease;
-    right: 404px;
+    right: 225px;
     z-index: 0;
     border-radius: 5px;
     top: -30px;
 }
 .settings-form-active {
-    transition: 1s all ease;
-    top: 40px;
+    visibility: visible;
+    transition: 0.1s all ease;
+    top: 55px;
+}
+.sign-form-active.out {
+    transform: translateY(-500px);
 }
 #string {
     display: none;
@@ -191,6 +198,14 @@ body { /*Убирает отступ по краям экрана*/
 }
 #string:checked + label {
     transform: rotate(-180deg);
+}
+.main-container {
+    max-width: 1000px;
+    min-width: 1000px;
+    height: 1500px;
+    background-color: aquamarine;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
