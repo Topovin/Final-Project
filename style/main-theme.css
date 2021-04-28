@@ -298,3 +298,74 @@ body { /*Убирает отступ по краям экрана*/
 .input1::-moz-placeholder          {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
 .input1:-moz-placeholder           {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
 .input1:-ms-input-placeholder      {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+
+
+.bg-picture{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+
+@media screen and (max-width:1200px) {
+  .bg-picture{
+      display: none;
+  } 
+  .main-container{
+      width: 100%;
+      left: 0;
+      margin-left:0 ;
+      transition: 0.5s;
+  }
+}
+@media screen and (min-width:1200px) {
+    .main-container{    
+        transition: 0.5s;
+    }
+}
+
+
+
+
+
+
+
+
+  /*
+.up-menu {  
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(142, 49, 230);
+    font-family: 'Open Sans', arial;
+    z-index: 1;
+    display: flex;  
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.main-container {
+    max-width: 1400px;
+    width: 100%;
+    height: 1500px;
+    margin: 0 auto;
+    background-color: rgb(192, 96, 96);
+    z-index: 3;
+
+    margin-top: 8%;
+
+    
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.bg-picture{
+    background-size: cover;
+    background-image: url('../Images/Фон.png');
+    width: 100%;
+    height: 80%;
+    position: fixed;
+    background-repeat: no-repeat;
+    z-index: 1;
+}*/
