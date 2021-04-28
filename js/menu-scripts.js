@@ -17,42 +17,53 @@ const navMain2 = document.querySelector('.down-menu');
 menuBurger2.addEventListener('click', (Event) => {
     navMain2.classList.toggle('down-menu-active');
 }); 
-<<<<<<< HEAD
-=======
-
->>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
 const sun = document.querySelector('.far.fa-sun');
 const moon = document.querySelector('.far.fa-moon');
-const changeTheme = document.querySelector('#sun-moon');
+const changeTheme = document.querySelector('.switch');
 const icon = document.querySelector('.sun-moon');
 const body = document.body;
+const container = document.querySelector('.main-container');
 
 changeTheme.addEventListener('click', (Event) =>{
+    changeTheme.classList.toggle('active');
     if(document.querySelector('.far.fa-sun')){
         icon.innerHTML = `
         <i class="far fa-moon"></i>`
-        body.style.backgroundColor = 'black';
+        container.style.backgroundColor = 'black';
     }
     else{
         icon.innerHTML = `
         <i class="far fa-sun"></i>`
-        body.style.backgroundColor = 'white';
+        container.style.backgroundColor = 'white';
     }
-})
-<<<<<<< HEAD
-var header = $('.sign-form-active'),
-		scrollPrev = 0;
-
-$(window).scroll(function() {
-	var scrolled = $(window).scrollTop();
- 
-	if ( scrolled > 100 && scrolled > scrollPrev ) {
-		header.addClass('out');
-	} else {
-		header.removeClass('out');
-	}
-	scrollPrev = scrolled;
 });
- 
-=======
->>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
+
+menuBurger.addEventListener('click', (Event) => {
+    if(navMain1.classList.contains("settings-form-active")){
+        navMain1.classList.toggle('settings-form-active');
+    }
+    if(navMain2.classList.contains("down-menu-active")){
+        navMain2.classList.toggle('down-menu-active');
+    }
+});
+
+menuBurger1.addEventListener('click', (Event) => {
+    if(navMain.classList.contains("sign-form-active")){
+        navMain.classList.toggle('sign-form-active');
+    }
+    if(navMain2.classList.contains("down-menu-active")){
+        navMain2.classList.toggle('down-menu-active');
+    }
+});
+
+
+
+menuBurger2.addEventListener('click', (Event) => {
+    if(navMain.classList.contains("sign-form-active")){
+        navMain.classList.toggle('sign-form-active');
+    }
+    if(navMain1.classList.contains("settings-form-active")){
+        navMain1.classList.toggle('settings-form-active');
+    }
+});
+

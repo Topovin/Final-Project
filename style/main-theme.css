@@ -1,15 +1,20 @@
 body { /*Убирает отступ по краям экрана*/
+    box-sizing: border-box;
     margin: 0 0 0 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 .up-menu {  /*Верхнее меню*/
-    position: absolute;
+    min-width: 800px;
+    position: fixed;
     width: 100%;
     height: 60px;
-    background-color: rgb(142, 49, 230);
+   
     font-family: 'Open Sans', arial;
     z-index: 1;
     display: flex;  
     align-items: center;
+    justify-content: space-between;
 }
 .down-menu {
     position: fixed;
@@ -22,7 +27,8 @@ body { /*Убирает отступ по краям экрана*/
     margin-left: auto;
     display: flex;
     transition: 1s all ease;
-    right: -1730px;
+    right: -90%;
+    z-index: 2;
 }
 .down-menu-active {
     transition: 0.7s all ease;
@@ -83,15 +89,33 @@ body { /*Убирает отступ по краям экрана*/
     border-radius: 50px;
     box-shadow: inset 1px 1px 10px -1px
 }
+.left-btn{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(142, 49, 230);
+    border-bottom-right-radius:40px ;
+    border-top-right-radius:40px ;
+}
 .right-btn { /*Стилизация кнопок в верхнем меню навигации с правой стороны*/
-    position: absolute;
-    top: 0;
-    right: 10px;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgb(142, 49, 230);
+    border-bottom-left-radius:40px ;
+    border-top-left-radius:40px ;
 }
 .right-btn > button {
     height: 60px;
     width: auto;
     font-size: 125%;
+    margin-left: 2%;
     border-radius: 0px;
     border: none;
     background-color: rgb(132, 24, 233);
@@ -167,27 +191,18 @@ body { /*Убирает отступ по краям экрана*/
     height: 75px;
     background-color: rgb(255, 154, 71);
     transition: 1s all ease;
-<<<<<<< HEAD
     right: 225px;
-=======
-    right: 223px;
->>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
     z-index: 0;
     border-radius: 5px;
     top: -30px;
 }
 .settings-form-active {
-<<<<<<< HEAD
     visibility: visible;
-    transition: 0.1s all ease;
-    top: 55px;
+    transition: 1s all ease;
+    top: 60px;
 }
 .sign-form-active.out {
     transform: translateY(-500px);
-=======
-    transition: 1s all ease;
-    top: 55px;
->>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
 }
 #string {
     display: none;
@@ -210,30 +225,76 @@ body { /*Убирает отступ по краям экрана*/
 #string:checked + label {
     transform: rotate(-180deg);
 }
-<<<<<<< HEAD
 .main-container {
-    max-width: 1000px;
-    min-width: 1000px;
-    height: 1500px;
-    background-color: aquamarine;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-=======
-.theme-selector{
-    margin-top: 20px;
     width: 100%;
-    height: 20px;
+    max-width: 60%;
+    min-width: 30%;
+    height: 1500px;
+    background-color: white;
+    z-index: 0;
+    position: absolute;
+    margin-top: 8%;
+    left:50%;
+    margin-left:-30%;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
 }
-#sun-selector {
+.theme-selector{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#search-form {
+    margin-left: 30px;
+    width: 50%;
+    height: 30px;
+    border: 3px solid white;
+    background: rgb(177, 103, 247);
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
->>>>>>> bcbb97ca035a75ac6a7a424222a12aba1f6eb126
-
-
+#search {
+    margin-left: 2px;
+    color: white;
+    background: none;
+    border: none;
+    height: inherit;
+    width: 80%;
+}
+#search[placeholder] {
+    color: white;
+} 
+#search:focus {
+    outline: none;
+}
+#search-submit {
+    border: none;
+    background: none;
+    width: 35px;
+    height: inherit;
+    transition: 0.5s;
+}
+#search-submit > i {
+    transform: rotate(180deg);
+    color: white;
+}
+#search-submit:hover {
+    transform: translate(5px);
+    transition: 0.5s;
+}
+.input1::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.input1::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.input1:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.input1:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.input1:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.input1:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.input1:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.input1:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+.input1::-webkit-input-placeholder {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+.input1::-moz-placeholder          {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+.input1:-moz-placeholder           {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+.input1:-ms-input-placeholder      {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}

@@ -4,7 +4,7 @@ var result = document.querySelector('.result')
     if (document.querySelector('#password').value === document.querySelector('#repeat-password').value);
     else {
         alert('Пароли не совпадают');
-        result.innerHTML += `
+        result.innerHTML = `
             <p>Пароли не совпадают!!!!</p>    
     `;
     }
