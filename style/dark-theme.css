@@ -1,0 +1,30 @@
+.switch{
+    transition: 0.5s all ease;
+    width: 30px;
+    height: 15px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 35px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.switch-circle{
+    transition: 0.5s all ease;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+    background-color: white;
+    margin-left: 3px;
+    margin-right: 3px;
+    z-index: 33;
+    cursor: pointer;
+}
+.active{
+    transition: 0.5s ;
+    justify-content: flex-end;
+    background-color: rgb(95, 95, 247);
+    cursor: pointer;
+}
