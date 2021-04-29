@@ -1,3 +1,23 @@
+    @-webkit-keyframes light{
+    0%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
+    50%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #444, 0px 0px 5px rgb(87, 212, 93), 0px 0px 8px rgb(87, 212, 93); }
+    100% { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
+    }
+    @-moz-keyframes light{
+    0%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
+    50%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #444, 0px 0px 5px rgb(87, 212, 93), 0px 0px 8px rgb(87, 212, 93); }
+    100% { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
+    }
+    @-o-keyframes light{
+    0%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
+    50%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #444, 0px 0px 5px rgb(87, 212, 93), 0px 0px 8px rgb(87, 212, 93); }
+    100% { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
+    }
+    @keyframes light{
+    0%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
+    50%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #444, 0px 0px 5px rgb(87, 212, 93), 0px 0px 8px rgb(87, 212, 93); }
+    100% { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
+    }
 body { /*Убирает отступ по краям экрана*/
     box-sizing: border-box;
     margin: 0 0 0 0;
@@ -244,6 +264,9 @@ body { /*Убирает отступ по краям экрана*/
     transform: rotate(-180deg);
 }
 .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 60%;
     height: 1500px;
     background-color: rgb(192, 96, 96);
@@ -252,8 +275,8 @@ body { /*Убирает отступ по краям экрана*/
     margin-top: 8%;
     left:50%;
     margin-left:-30%;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
 }
 .theme-selector{
     height: 20px;
@@ -321,6 +344,7 @@ body { /*Убирает отступ по краям экрана*/
 .bg-picture{
     background-size: cover;
     background-image: url('../Images/Фон.png');
+    height: 100%;
     width: 100%;
     bottom: 0;
     position: fixed;
@@ -373,38 +397,72 @@ body { /*Убирает отступ по краям экрана*/
     background-color: rgb(95, 95, 247);
     cursor: pointer;
 }
-
-.switch{
-    transition: 0.5s all ease;
-    width: 30px;
+#nav-genres {
+    position: relative;
+    top: -0.5%;
+    width: 97%;
     height: 15px;
-    background-color: rgb(219, 219, 219);
-    border-radius: 35px;
-    margin-left: 5px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    cursor: pointer;
+    justify-content: space-between;
 }
-.switch-circle{
-    transition: 0.5s all ease;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%; 
-    background-color: white;
-    margin-left: 3px;
-    margin-right: 3px;
-    z-index: 33;
-    cursor: pointer;
+a.nav-btn{
+    height: inherit;
+    display: block;
+    font-size: 1.1em;
+    width: 110px;
+    text-decoration: none;
+    text-align: center;
+    font: bold 14px arial;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 20px auto;
+    color: rgb(87, 212, 93);
+    background-color: rgb(51, 51, 51);
+    background-image: linear-gradient(top, rgb(114, 114, 114) 0%, rgb(47, 47, 47) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(114, 114, 114)), color-stop(1, rgb(47, 47, 47)));
+    background-image: -moz-linear-gradient(top, rgb(114, 114, 114) 0%, rgb(47, 47, 47) 100%);
+    background-image: -o-linear-gradient(top, rgb(114, 114, 114) 0%, rgb(47, 47, 47) 100%);
+    border: none;
+    border-radius: 8px;
+    text-shadow: 0px -1px 0px #000;
+    box-shadow: 0px 1px 0px rgb(71, 71, 71),0px 5px 0px rgb(41, 41, 41),0px 6px 6px rgba(0, 0, 0, .6);
+    -webkit-transition: ease .15s all;
+    -moz-transition: ease .15s all;
+    -o-transition: ease .15s all;
+    transition: ease .15s all;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    animation: none;
 }
-.active{
-    transition: 0.5s ;
-    justify-content: flex-end;
-    background-color: rgb(95, 95, 247);
-    cursor: pointer;
+    a.nav-btn:hover, a.nav-btn:focus{
+    -webkit-animation: linear 1.2s light infinite;
+    -moz-animation: linear 1.2s light infinite;
+    -o-animation: linear 1.2s light infinite;
+    animation: linear 1.2s light infinite;
 }
-
+    a.nav-btn:active{
+    color: rgb(87, 212, 93);
+    text-shadow: 0px -1px 0px rgb(56, 56, 56),0px 0px 5px rgb(230, 230, 199 rgb(87, 212, 93) 0px 8px rgb(87, 212, 93));
+    box-shadow: 0px 1px 0px rgb(85, 85, 85),0px 2px 0px rgb(49, 49, 49),0px 2px 2px rgba(0, 0, 0, .9);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -o-transform: translateY(3px);
+    transform: translateY(3px);
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    animation: none;
+}
+.line {
+    border-radius: 5px;
+    top: 75px;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: rgb(47, 47, 47);
+}
 
   /*
 .up-menu {  

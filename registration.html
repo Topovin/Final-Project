@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/dark-theme.css" id="a">
     <link href="https://allfont.ru/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" /> <!--font-family: 'Open Sans', arial;-->
     <link rel="stylesheet" href="font-awesome/css/all.min.css">
+    <link href="https://allfont.ru/allfont.css?fonts=micra" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="sign-form">
@@ -41,13 +42,10 @@
                 <div class="right-btn">
                     <button class="settings-btn"><i class="fas fa-cog"></i></button>
                     <button class="sign-btn">Войти</button>
-                    <button onclick="window.location.href = 'registration.html';">Регистрация</button>
                 </div>
         </div>
         <div class="down-menu">
             <input type="checkbox" id="string" class="string"><label for="string" id="string-label"><i class="fas fa-chevron-left"></i></label>
-            <button id="news">Новинки 2021</button>
-            <button>Анонсы</button>
             <button>Оформить подписку</button>
             <button>Отзывы</button>
             <button>О нас</button>
@@ -55,10 +53,10 @@
         </div>
     </nav>
    
-        <img class="bg-picture" src="images/Фон.png">
+        <img class="bg-picture">
    
     <div class="main-container">
-        <h1>Регистрация</h1>
+        <div class="h-reg"><h1>Регистрация</h1></div>
         <form id="reg-form" onsubmit="return false" name="registr">
             <div class="up-form-reg">
                 <input type="text" id="login" placeholder="Логин" name="inplogin" autocomplete="off" required /><br>
