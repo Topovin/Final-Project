@@ -1,15 +1,21 @@
 body { /*Убирает отступ по краям экрана*/
+    box-sizing: border-box;
     margin: 0 0 0 0;
+    width: 100%;
+    overflow-x: hidden;
+  
 }
 .up-menu {  /*Верхнее меню*/
+    min-width: 800px;
     position: fixed;
     width: 100%;
     height: 60px;
-    background-color: rgb(142, 49, 230);
+    max-width: 100%;
     font-family: 'Open Sans', arial;
-    z-index: 1;
+    z-index: -1;
     display: flex;  
     align-items: center;
+    justify-content: space-between;
 }
 .down-menu {
     position: fixed;
@@ -22,7 +28,7 @@ body { /*Убирает отступ по краям экрана*/
     margin-left: auto;
     display: flex;
     transition: 1s all ease;
-    right: -1730px;
+    right: -90%;
     z-index: 2;
 }
 .down-menu-active {
@@ -67,8 +73,8 @@ body { /*Убирает отступ по краям экрана*/
 }
 #main { /*Стилизация кноки "Главная"*/
     border-radius: 35px;
-    height: 60px;
-    width: auto;
+    height: 100%;
+    width: 20%;
     font-size: 125%;
     border: none;
     background-color: rgb(132, 24, 233);
@@ -84,15 +90,44 @@ body { /*Убирает отступ по краям экрана*/
     border-radius: 50px;
     box-shadow: inset 1px 1px 10px -1px
 }
-.right-btn { /*Стилизация кнопок в верхнем меню навигации с правой стороны*/
-    position: absolute;
-    top: 0;
-    right: 10px;
+.left-btn{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(142, 49, 230);
+    border-bottom-right-radius:40px ;
+    border-top-right-radius:40px ;
 }
-.right-btn > button {
-    height: 60px;
-    width: auto;
+.right-btn { /*Стилизация кнопок в верхнем меню навигации с правой стороны*/
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgb(142, 49, 230);
+    border-bottom-left-radius:40px ;
+    border-top-left-radius:40px ;
+}
+.right-btn > .sign-btn {
+    height: 100%;
+    width: 32%;
     font-size: 125%;
+    margin-left: 2%;
+    border-radius: 0px;
+    border: none;
+    background-color: rgb(132, 24, 233);
+    color: white;
+    font-family: 'Open Sans', arial;
+}
+.right-btn > .settings-btn{
+    height: 100%;
+    width: 12%;
+    font-size: 125%;
+ 
     border-radius: 0px;
     border: none;
     background-color: rgb(132, 24, 233);
@@ -113,18 +148,20 @@ body { /*Убирает отступ по краям экрана*/
     position: fixed;
     display: flex;
     background-color: rgb(255, 154, 71);
-    width: 221px;
+    width: 10%;
     height: 150px;
     top: -150px;
     transition: 1s all ease;
-    right: 0;
-    z-index: 0;
+    
+    z-index: -3;
     border-radius: 5px;
 }
 .sign-form-active {
     visibility: visible;
     transition: 1s all ease;
     top: 55px;
+    z-index: -3;
+  
 }
 .sign-form > form > input {
     margin-top: 20px;
@@ -169,7 +206,7 @@ body { /*Убирает отступ по краям экрана*/
     background-color: rgb(255, 154, 71);
     transition: 1s all ease;
     right: 225px;
-    z-index: 0;
+    z-index: -3;
     border-radius: 5px;
     top: -30px;
 }
@@ -177,6 +214,7 @@ body { /*Убирает отступ по краям экрана*/
     visibility: visible;
     transition: 1s all ease;
     top: 60px;
+    z-index: -3;
 }
 .sign-form-active.out {
     transform: translateY(-500px);
@@ -204,7 +242,6 @@ body { /*Убирает отступ по краям экрана*/
 }
 .main-container {
     width: 60%;
-    
     height: 1500px;
     background-color: rgb(192, 96, 96);
     z-index: 0;
@@ -223,16 +260,71 @@ body { /*Убирает отступ по краям экрана*/
     align-items: center;
     justify-content: space-between;
 }
-
+#search-form {
+    margin-left: 30px;
+    width: 50%;
+    height: 50%;
+    border: 3px solid white;
+    background: rgb(177, 103, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search {
+    margin-left: 2px;
+    color: white;
+    background: none;
+    border: none;
+    height: inherit;
+    width: 80%;
+}
+#search[placeholder] {
+    color: white;
+} 
+#search:focus {
+    outline: none;
+}
+#search-submit {
+    border: none;
+    background: none;
+    width: 35px;
+    height: inherit;
+    transition: 0.5s;
+}
+#search-submit:focus {
+    outline: none;
+}
+#search-submit > i {
+    transform: rotate(180deg);
+    color: white;
+}
+#search-submit:hover {
+    transform: translate(5px);
+    transition: 0.5s;
+}
+.input1::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+.input1::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+.input1:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+.input1:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+.input1:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+.input1:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+.input1:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+.input1:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+.input1::-webkit-input-placeholder {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+.input1::-moz-placeholder          {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+.input1:-moz-placeholder           {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+.input1:-ms-input-placeholder      {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
 
 .bg-picture{
+    background-size: cover;
+    background-image: url('../Images/Фон.png');
     width: 100%;
     height: 100%;
     position: fixed;
+    background-repeat: no-repeat;
+    z-index: -4;
 }
-
-
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1200px) { /*при мониторе меньше 1200рх*/
   .bg-picture{
       display: none;
   } 
@@ -240,20 +332,45 @@ body { /*Убирает отступ по краям экрана*/
       width: 100%;
       left: 0;
       margin-left:0 ;
-      transition: 0.5s;
+      transition: 0.2s;
   }
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1200px) {/*при мониторе больше 1200рх*/
     .main-container{    
-        transition: 0.5s;
+        transition: 0.2s;
     }
 }
 
-
-
-
-
-
+.switch{
+    transition: 0.5s all ease;
+    width: 30px;
+    height: 15px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 35px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.switch-circle{
+    transition: 0.5s all ease;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+    background-color: white;
+    margin-left: 3px;
+    margin-right: 3px;
+    z-index: 33;
+    cursor: pointer;
+}
+.active{
+    transition: 0.5s ;
+    justify-content: flex-end;
+    background-color: rgb(95, 95, 247);
+    cursor: pointer;
+}
 
 
   /*
@@ -277,10 +394,7 @@ body { /*Убирает отступ по краям экрана*/
     margin: 0 auto;
     background-color: rgb(192, 96, 96);
     z-index: 3;
-
     margin-top: 8%;
-
-    
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
 }

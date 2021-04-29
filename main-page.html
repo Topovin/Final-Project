@@ -7,11 +7,11 @@
     <title>Final Project</title>
 
     <link rel="stylesheet" href="style/main-theme.css">
-    <link rel="stylesheet" href="style/dark-theme.css">
+    <link rel="stylesheet" href="style/dark-theme.css" id="a">
     <!-- <link href="https://allfont.ru/allfont.css?fonts=open-sans" rel="stylesheet" type="text/css" /> font-family: 'Open Sans', arial; -->
     <link rel="stylesheet" href="font-awesome/css/all.min.css">
 </head>
-<body >
+<body>
     <div class="sign-form">
         <form>
             <input type="email" placeholder="Email">
@@ -32,16 +32,20 @@
     </div>
     <nav>
         <div class="up-menu">
-            <button id="main" onclick="window.location.href = 'main-page.html';">Главная</button>
-            <input type="text" name="search" placeholder="Search..">
+                <div class="left-btn">
+                    <button id="main" onclick="window.location.href = 'main-page.html';">Главная</button>
+                    <form id="search-form">
+                        <input type="search" name="search" placeholder="Поиск по сайту" id="search" class="input1"><button id="search-submit"><i class="fas fa-chevron-left"></i></button>
+                    </form>
+                </div>
                 <div class="right-btn">
                     <button class="settings-btn"><i class="fas fa-cog"></i></button>
                     <button class="sign-btn">Войти</button>
-                    <button onclick="window.location.href = 'registration.html';">Регистрация</button>
+                    <button class="sign-btn" onclick="window.location.href = 'registration.html';">Регистрация</button>
                 </div>
         </div>
         <div class="down-menu">
-            <input type="checkbox" id="string"><label for="string" id="string-label"><i class="fas fa-chevron-left"></i></label>
+            <input type="checkbox" id="string" class="string"><label for="string" id="string-label"><i class="fas fa-chevron-left"></i></label>
             <button id="news">Новинки 2021</button>
             <button>Анонсы</button>
             <button>Оформить подписку</button>
@@ -51,7 +55,7 @@
         </div>
     </nav>
    
-        <img class="bg-picture" src="Images/Фон.png" alt="">
+        <img class="bg-picture">
    
     <div class="main-container">
         
