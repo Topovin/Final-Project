@@ -13,6 +13,7 @@ menuBurger1.addEventListener('click', (Event) => {
 
 const menuBurger2 = document.querySelector('#string'); //для выезжания окошка при нажатии на кнопку "Настройки"
 const navMain2 = document.querySelector('.down-menu');
+const string = document.querySelector('.string');
 
 menuBurger2.addEventListener('click', (Event) => {
     navMain2.classList.toggle('down-menu-active');
@@ -23,19 +24,19 @@ const changeTheme = document.querySelector('.switch');
 const icon = document.querySelector('.sun-moon');
 const body = document.body;
 const container = document.querySelector('.main-container');
+let link1 = document.querySelector('#a');
+// console.log(link1.getAttribute('href'));
+link1.setAttribute('href', 'style/light-theme.css')
 
 changeTheme.addEventListener('click', (Event) =>{
-    changeTheme.classList.toggle('active');
-    if(document.querySelector('.far.fa-sun')){
-        icon.innerHTML = `
-        <i class="far fa-moon"></i>`
-        container.style.backgroundColor = 'black';
-    }
-    else{
-        icon.innerHTML = `
-        <i class="far fa-sun"></i>`
-        container.style.backgroundColor = 'white';
-    }
+   if(link1.getAttribute('href') == 'style/dark-theme.css'){
+        link1.setAttribute('href', 'style/light-theme.css');
+        changeTheme.classList.toggle('active');
+   }
+   else{
+       link1.setAttribute('href', 'style/dark-theme.css');
+       changeTheme.classList.toggle('active');
+   }
 });
 
 menuBurger.addEventListener('click', (Event) => {
@@ -44,6 +45,7 @@ menuBurger.addEventListener('click', (Event) => {
     }
     if(navMain2.classList.contains("down-menu-active")){
         navMain2.classList.toggle('down-menu-active');
+        string.checked = false;
     }
 });
 
@@ -53,6 +55,19 @@ menuBurger1.addEventListener('click', (Event) => {
     }
     if(navMain2.classList.contains("down-menu-active")){
         navMain2.classList.toggle('down-menu-active');
+        string.checked = false;
+        console.log(string.checked);
+    }
+});
+
+
+
+menuBurger2.addEventListener('click', (Event) => {
+    if(navMain.classList.contains("sign-form-active")){
+        navMain.classList.toggle('sign-form-active');
+    }
+    if(navMain1.classList.contains("settings-form-active")){
+        navMain1.classList.toggle('settings-form-active');
     }
 });
 

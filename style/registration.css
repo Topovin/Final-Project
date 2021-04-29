@@ -1,82 +1,126 @@
-
-#select-genre {
-    width: 190px;
-    height: 100px;
-    overflow-y: auto;
+.resultlogin {
+    display: none;
+}
+p.login-error {
+    height: 20px;
+    position: absolute;
+    padding-left: 20px;
+    margin-top: 0px;
     -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
-textarea {
-    resize: none;
+p.pass-error {
+    height: 20px;
+    position: absolute;
+    padding-left: 20px;
+    margin-top: -47px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
-.result p{
-    color: red;
-   
+h1 {
+    margin-left: 35%;
 }
-body{
-    font-family: 'Lobster', arial;
+#reg-form > .up-form-reg > input:focus {
+    outline: none;
 }
-button{
-    font-family: 'Lobster', arial;
-}
-.registration{
-    width: 100%;
-    min-width: 300px;
-    max-width: 700px;
-    height: auto;
-    border: 1px solid red;
+#reg-form {
+    width: 400px;
+    height: 700px;
+    margin-left: 10%;
+    background-color: burlywood;
+    z-index: 2;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
-    flex-direction: row;
 }
-#div-row{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-right: auto;
-    width: 100%;
-    border: 1px solid gray;
+textarea {
+    font-size: 110%;
+    position: relative;
+    resize: none;
+    width: 300px;
+    height: 100px;
+    left: 5%;
+    background-color: burlywood;
+    border: 2px solid rgba(0, 0, 0, 0.3);
 }
-#other{
-    display: flex;
-    flex-direction: column;
- 
-    width: 100%;
-    border: 1px solid gray;
+textarea:focus {
+    outline: none;
+    border: 2px solid black;
+    transition: 0.1s;
 }
-#fa-lock{
-   font-size: 2000%;
-   color: red;
+.up-form-reg {
+    height: 200px;
 }
-.sub-menu{
-    width: 50%;
-}
-.sub-menu button{
-    width: 20%;
-    height: 30px;
-}
-.sub-menu .margin-left{
+.up-form-reg > input{
+    width: 250px;
+    height: 20px;
+    background: none;
+    border: 2px solid rgba(0, 0, 0, 0.3);
     margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 5px;
 }
-#lock-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.up-form-reg > input:focus {
+    border: 2px solid black;
+    transition: 0.1s;
 }
-#lock-info p{
-    font-size: 200%;
-    color: red;
+#h-gender {
+    height: 10px;
+    position: relative;
+    top: -20px;
+    left: 5%;
 }
-.registration button{
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 9%;
+input[type=radio], #label {
+    position: relative;
+    top: -20px;
+    left: 5%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
-.registration button:hover{
-    background-color: rgb(202, 69, 69);
-    color: black;
-    border: none;
+input[type=radio]:hover {
+    cursor: pointer;
 }
+#submit-btn {
+    position: relative;
+    top: 20px;
+    left: 5%;
+}
+.resultlogin {
+    z-index: -1;
+}
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+input::-webkit-input-placeholder {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+input::-moz-placeholder          {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+input:-moz-placeholder           {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+input:-ms-input-placeholder      {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+textarea::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+textarea::-webkit-input-placeholder {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+textarea::-moz-placeholder          {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+textarea:-moz-placeholder           {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;}
+textarea:-ms-input-placeholder      {color: white; font-family: 'Open Sans', arial; letter-spacing: 0.75px; padding-left: 3.5px;} 
+
