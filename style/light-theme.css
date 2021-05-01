@@ -3,5 +3,5 @@ body{
     transition: 1s;
 }
 .main-container{
-    background-color: rgb(66, 66, 66);
+    background: linear-gradient(to bottom, #c6e262 0%,#95c361 100%);
 }
