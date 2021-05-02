@@ -2,6 +2,6 @@ body{
     background-color: black;
     transition: 1s;
 }
-.main-container{
+.main-container , .left-btn , .right-btn{
     background-color: rgb(59, 82, 82);
 }

@@ -29,18 +29,7 @@ body { /*Убирает отступ по краям экрана*/
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.up-menu {  /*Верхнее меню*/
-    min-width: 800px;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    max-width: 100%;
-    font-family: 'Open Sans', arial;
-    z-index: -1;
-    display: flex;  
-    align-items: center;
-    justify-content: space-between;
-}
+
 .down-menu {
     position: fixed;
     border-bottom-left-radius: 35px;
@@ -54,6 +43,9 @@ body { /*Убирает отступ по краям экрана*/
     transition: 1s all ease;
     right: -90%;
     z-index: 2;
+}
+.down-menu *{
+    margin-left: 2%;
 }
 .down-menu-active {
     transition: 0.7s all ease;
@@ -92,40 +84,35 @@ body { /*Убирает отступ по краям экрана*/
     border-radius: 10px;
     box-shadow: inset 1px 1px 10px -1px
 }
-.left-btn{
-    height: 100%;
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    background: linear-gradient(to bottom, #c6e262 0%,#95c361 100%);
-    border-bottom-right-radius: 40px ;
-    border-top-right-radius: 40px ;
-    box-shadow: 1px 6px 13px 1px rgba(0,0,0,0.77);
-    -webkit-box-shadow: 1px 6px 13px 1px rgba(0,0,0,0.77);
-    -moz-box-shadow: 1px 6px 13px 1px rgba(0,0,0,0.77);
+.up-menu {  /*Верхнее меню*/
+ height: 60px;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;   
 }
-.right-btn { /*Стилизация кнопок в верхнем меню навигации с правой стороны*/
-    height: 100%;
-    width: 20%;
+.up-menu .left-btn{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    justify-content: flex-start;
+}
+.up-menu .right-btn { /*Стилизация кнопок в верхнем меню навигации с правой стороны*/
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    justify-content: flex-end;
+}
+.up-menu .right-btn , .left-btn{
+    width: 300px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    background: linear-gradient(to bottom, #c6e262 0%,#95c361 100%);
-    border-bottom-left-radius: 40px ;
-    border-top-left-radius: 40px ;
-    box-shadow: -1px 6px 13px 1px rgba(0,0,0,0.77);
-    -webkit-box-shadow: -1px 6px 13px 1px rgba(0,0,0,0.77);
-    -moz-box-shadow: -1px 6px 13px 1px rgba(0,0,0,0.77);
+    
 }
 .right-btn > .sign-btn {
     height: 70%;
     width: 32%;
-    font-size: 125%;
+    font-size: 99%;
     margin-left: 2%;
-    border-radius: 0px;
+    
     border: none;
     background-color: rgb(49, 49, 49);
     color: rgb(87, 212, 93);
@@ -133,63 +120,67 @@ body { /*Убирает отступ по краям экрана*/
     border-radius: 20px;
 }
 .right-btn > .settings-btn{
-    height: 70%;
-    width: 12%;
-    font-size: 125%;
-    border-radius: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     border: none;
-    background-color: rgb(44, 44, 44);
+    background-color: rgb(49, 49, 49);
     color: rgb(87, 212, 93);
-    font-family: 'Open Sans', arial;
-    border-radius: 20px;
+    font-size: 99%;
 }
-.right-btn > button:focus {
-    outline: none;
-}
-.right-btn > button:hover {
-    background-color: rgb(47, 47, 47);
-    transition: 0.4s;
-    border-radius: 10px;
-    box-shadow: inset 1px 1px 10px -1px;
-}
+
 .sign-form { /*Стилизация выдвижного окошка при нажатии на кнопку "Войти"*/
     visibility: hidden;
     position: fixed;
     display: flex;
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(172, 172, 148);
     width: 10%;
     height: 150px;
     top: -150px;
     transition: 1s all ease;
     z-index: -3;
     border-radius: 5px;
+    right: 101px;
 }
 .sign-form-active {
     visibility: visible;
     transition: 1s all ease;
-    top: 55px;
+    top: 60px;
     z-index: -3;
+    right: 101px; 
 }
-.sign-form > form > input {
+.sign-form > form div input {
     margin-top: 20px;
-    width: 150px;
+    width: 80%;
     height: 15px;
     margin-left: 30.25px;
     border: none;
     border-bottom: 1px solid rgb(87, 212, 93);
     background: none;
 }
-.sign-form > form > input:focus {
+.sign-form form div:last-child {
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+.sign-form > form div input:focus {
     outline: none;
 }
-.sign-form-btn {
+.sign-form form p *{
+    display: inline;
+}
+.sign-form button {
     margin-top: 25px;
     margin-left: 10px;
     border: none;
     background-color: rgb(34, 34, 34);
     color: rgb(87, 212, 93);
+    width: 45%;
+    height: 25px;
+    text-align: center;
+    font-size: 60%;
 }
-.sign-form-btn:hover {
+.sign-form button:hover {
     background-color: rgb(61, 61, 61);
     box-shadow: inset 1px 1px 10px -1px;
     transition: 0.4s;
@@ -340,20 +331,54 @@ body { /*Убирает отступ по краям экрана*/
     z-index: -4;
 }
 @media screen and (max-width:1200px) { /*при мониторе меньше 1200рх*/
-  .bg-picture{
-      display: none;
-  } 
-  .main-container{
-      width: 100%;
-      left: 0;
-      margin-left:0 ;
-      transition: 0.2s;
-  }
+    .bg-picture{
+        display: none;
+    } 
+    .main-container{
+        width: 100%;
+        left: 0;
+        margin-left:0 ;
+        transition: 0.2s;
+    }
 }
 @media screen and (min-width:1200px) {/*при мониторе больше 1200рх*/
     .main-container{    
         transition: 0.2s;
     }
+}
+@media screen and (max-width: 1500px){
+    .sign-form-active{
+        height: 70px;
+        width: 300px;
+    }
+    .sign-form-active form{
+        display: flex;
+        flex-direction: row;
+    }
+    .sign-form-active > form div input {
+        width: 80%;
+        height:20% ;
+        line-height: 1px;
+        font-size: 80%;
+    }
+    .sign-form-active form div:last-child{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+    .sign-form-active form div:first-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+    .sign-form-active button {
+        width: 60%;
+        height: 300%;
+        margin-bottom: -7%;
+    }
+
 }
 .switch{
     transition: 0.5s all ease;
@@ -385,19 +410,11 @@ body { /*Убирает отступ по краям экрана*/
     background-color: rgb(87, 212, 93);
     cursor: pointer;
 }
-#nav-genres {
-    position: relative;
-    top: -0.5%;
-    width: 97%;
-    height: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
 .left-btn > #main {
     height: 70%;
     width: 32%;
-    font-size: 125%;
+    font-size: 99%;
     margin-left: 2%;
     border-radius: 0px;
     border: none;
@@ -426,35 +443,32 @@ body { /*Убирает отступ по краям экрана*/
     -o-animation: none;
     animation: none;
 }
-a.nav-btn{
-    height: inherit;
-    display: block;
-    font-size: 1.1em;
-    width: 110px;
-    text-decoration: none;
-    text-align: center;
-    font: bold 14px arial;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    margin: 20px auto;
-    color: rgb(87, 212, 93);
-    background-color: rgb(51, 51, 51);
-    background-image: linear-gradient(top, rgb(114, 114, 114) 0%, rgb(47, 47, 47) 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(114, 114, 114)), color-stop(1, rgb(47, 47, 47)));
-    background-image: -moz-linear-gradient(top, rgb(114, 114, 114) 0%, rgb(47, 47, 47) 100%);
-    background-image: -o-linear-gradient(top, rgb(114, 114, 114) 0%, rgb(47, 47, 47) 100%);
+#nav-genres {
+
+    height: 60px;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#nav-genres .nav-btn{
+    border-radius: 35px;
+    height: 70%;
+    width: 15%;
+    
     border: none;
-    border-radius: 8px;
-    text-shadow: 0px -1px 0px #000;
-    box-shadow: 0px 1px 0px rgb(71, 71, 71),0px 5px 0px rgb(41, 41, 41),0px 6px 6px rgba(0, 0, 0, .6);
-    -webkit-transition: ease .15s all;
-    -moz-transition: ease .15s all;
-    -o-transition: ease .15s all;
-    transition: ease .15s all;
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation: none;
-    animation: none;
+    background-color: rgb(78, 78, 78);
+    
+    font-family: 'Open Sans', arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav-genres .nav-btn a{
+    text-decoration:none ;
+    color: rgb(87, 212, 93);
+    font-size: 99%;
 }
     a.nav-btn:hover, a.nav-btn:focus{
     -webkit-animation: linear 1.2s light infinite;

@@ -2,6 +2,7 @@ body{
     background-color: white;
     transition: 1s;
 }
-.main-container{
+.main-container , .left-btn , .right-btn {
     background: linear-gradient(to bottom, #c6e262 0%,#95c361 100%);
 }
+
