@@ -51,13 +51,28 @@
             <input type="checkbox" id="string" class="string"><label for="string" id="string-label"><i class="fas fa-chevron-left"></i></label>
             <button>Отзывы</button>
             <button>О нас</button>
-            <button>Контакты</button>
+            <button>Писюн</button>
         </div>
     </nav>
    
         <!--<img class="bg-picture">-->
    
     <div class="main-container">
+        <div class="main-container-reg">
+            <h1>Регистрация</h1>
+            <form class="reg- form" onsubmit="return false" name="registr">
+                <input type="text" class="reg" placeholder="Введите логин" required />
+                <input type="text" class="reg" placeholder="Email" required />
+                <input type="text" class="reg" placeholder="Введите пароль" required />
+                <input type="text" class="reg" placeholder="Введите пароль еще раз" required />
+                <p class="h-gender">Выберите пол:</p>
+                <div class="gender"><input type="radio" name="gender" class="select-gender" required /> <label>Мужской</label></div>
+                <div class="gender"><input type="radio" name="gender" class="select-gender" required /> <label>Женский</label></div>
+                <div class="gender"><input type="radio" name="gender" class="select-gender" required /> <label>Не указан</label></div>
+                <textarea placeholder="О себе" class="about-yourself"></textarea>
+                <button onclick="logincheak(); checkpass();" type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </div>
         
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

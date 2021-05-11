@@ -1,4 +1,4 @@
-    @-webkit-keyframes light{
+@-webkit-keyframes light{
     0%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
     50%   { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #444, 0px 0px 5px rgb(87, 212, 93), 0px 0px 8px rgb(87, 212, 93); }
     100% { color: rgb(87, 212, 93); text-shadow: 0px -1px 0px #000; }
@@ -335,9 +335,13 @@ body { /*Убирает отступ по краям экрана*/
     z-index: -4;
 }
 @media screen and (max-width:1200px) { /*при мониторе меньше 1200рх*/
-  
+    .bg-picture{
+        display: none;
+    } 
     .main-container{
-     
+        width: 100%;
+        left: 0;
+        margin-left:0 ;
         transition: 0.2s;
     }
 }
@@ -348,22 +352,35 @@ body { /*Убирает отступ по краям экрана*/
 }
 @media screen and (max-width: 1500px){
     .sign-form-active{
-        
+        height: 70px;
+        width: 300px;
     }
     .sign-form-active form{
-        
+        display: flex;
+        flex-direction: row;
     }
     .sign-form-active > form div input {
-     
+        width: 80%;
+        height:20% ;
+        line-height: 1px;
+        font-size: 80%;
     }
     .sign-form-active form div:last-child{
-      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
     }
     .sign-form-active form div:first-child{
- 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
     }
     .sign-form-active button {
-     
+        width: 60%;
+        height: 300%;
+        margin-bottom: -7%;
     }
 
 }
@@ -519,7 +536,7 @@ body { /*Убирает отступ по краям экрана*/
     align-items: center;
     justify-content: space-around;
 }
-#nav-genres *{
+#nav-genres .nav-btn{
     border-radius: 35px;
     height: 70%;
     width: 15%;
@@ -532,7 +549,7 @@ body { /*Убирает отступ по краям экрана*/
     justify-content: center;
     align-items: center;
 }
-#nav-genres * a{
+#nav-genres .nav-btn a{
     text-decoration:none ;
     color: rgb(87, 212, 93);
     font-size: 99%;
@@ -638,7 +655,7 @@ table{
    
 }
 
-.main-content .block{
+.main-content .serial{
     width: 45%;
     height: 200px;
     background-color: wheat;
@@ -652,33 +669,35 @@ table{
     
 }
 
-
-.main-content div div{
-    width: 75%;
+.main-content .serial div:first-child{
+    width: 30%;
     height: 100%;
-    border: 1px solid red;
+    border:1px solid red ;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.main-content .serial div:last-child{
+    width: 70%;
+    height: 100%;
+}
+.main-content .serial div:first-child img{
+    width: 80%;
+    display: block;
     margin-left: auto;
-  
+    margin-right: auto;
 }
-.main-content div img{
-   
- height: 100%;
-}
-.main-content div a{
-    height: 90%;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 1%;
-}
-.main-content div div  p{
-    font-size: 80%;
+.main-content .serial div:last-child  p{
+    font-size: 20%;
  
 }
-.main-content div div button{
-    width: 100px;
-    height: 30px;
-    margin-bottom: 2%;
+.main-content .serial div:last-child button{
+ 
 }
+
+.film , .anime{
+    display: none;
+}
+
 
 
 
@@ -700,6 +719,8 @@ table{
 .main-content .film-none div:first-child img{
     display: none;
 }
+
+
 
 
 

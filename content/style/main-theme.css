@@ -24,7 +24,7 @@ body { /*Убирает отступ по краям экрана*/
     width: 100%;
     overflow-x: hidden;
     background-color: rgb(93, 93, 93);
-    background-image: url(../Images/Фон2-0.png);
+    background-image: url(../../images/Фон2-0.png);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -49,7 +49,6 @@ body { /*Убирает отступ по краям экрана*/
     background: rgb(30, 31, 30);
     margin-left: auto;
     display: flex;
-    align-items: center;
     transition: 1s all ease;
     right: -90%;
     z-index: 2;
@@ -87,6 +86,12 @@ body { /*Убирает отступ по краям экрана*/
 }
 .down-menu > button:focus {
     outline: none;
+}
+.down-menu > button:hover {
+    background-color: rgb(128, 128, 128);
+    transition: 0.4s;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 10px -1px
 }
 .up-menu {  /*Верхнее меню*/
  height: 60px;
@@ -247,8 +252,9 @@ body { /*Убирает отступ по краям экрана*/
     flex-direction: column;
     justify-content: flex-start;
     width: 1200px;
-    height: 1500px;
-
+    height: auto;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 7px 15px 29px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 7px 15px 29px rgba(0,0,0,0);
     z-index: 0;
     position: absolute;
    
@@ -335,9 +341,9 @@ body { /*Убирает отступ по краям экрана*/
     z-index: -4;
 }
 @media screen and (max-width:1200px) { /*при мониторе меньше 1200рх*/
-  
+   
     .main-container{
-     
+       
         transition: 0.2s;
     }
 }
@@ -348,22 +354,22 @@ body { /*Убирает отступ по краям экрана*/
 }
 @media screen and (max-width: 1500px){
     .sign-form-active{
-        
-    }
-    .sign-form-active form{
-        
-    }
-    .sign-form-active > form div input {
-     
-    }
-    .sign-form-active form div:last-child{
       
     }
+    .sign-form-active form{
+       
+    }
+    .sign-form-active > form div input {
+      
+    }
+    .sign-form-active form div:last-child{
+       
+    }
     .sign-form-active form div:first-child{
- 
+        
     }
     .sign-form-active button {
-     
+        
     }
 
 }
@@ -421,90 +427,10 @@ body { /*Убирает отступ по краям экрана*/
     color: rgb(87, 212, 93);
     text-shadow: 0px -1px 0px rgb(56, 56, 56),0px 0px 5px rgb(230, 230, 199 rgb(87, 212, 93) 0px 8px rgb(87, 212, 93));
     box-shadow: 0px 1px 0px rgb(85, 85, 85),0px 2px 0px rgb(49, 49, 49),0px 2px 2px rgba(0, 0, 0, .9);
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation: none;
-    animation: none;
-}
-.nav-btn{
-    height: 70%;
-    width: 32%;
-    font-size: 99%;
-    margin-left: 2%;
-    border-radius: 0px;
-    border: none;
-    background-color: rgb(49, 49, 49);
-    color: rgb(87, 212, 93);
-    font-family: 'Open Sans', arial;
-    border-radius: 20px;
-}
-.nav-btn:focus, .nav-btn:hover{
-    -webkit-animation: linear 1.2s light infinite;
-    -moz-animation: linear 1.2s light infinite;
-    -o-animation: linear 1.2s light infinite;
-    animation: linear 1.2s light infinite;
-    outline: none;
-}
-.nav-btn:active{
-    color: rgb(87, 212, 93);
-    text-shadow: 0px -1px 0px rgb(56, 56, 56),0px 0px 5px rgb(230, 230, 199 rgb(87, 212, 93) 0px 8px rgb(87, 212, 93));
-    box-shadow: 0px 1px 0px rgb(85, 85, 85),0px 2px 0px rgb(49, 49, 49),0px 2px 2px rgba(0, 0, 0, .9);
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation: none;
-    animation: none;
-}
-.sign-btn{
-    height: 70%;
-    width: 32%;
-    font-size: 99%;
-    margin-left: 2%;
-    border-radius: 0px;
-    border: none;
-    background-color: rgb(49, 49, 49);
-    color: rgb(87, 212, 93);
-    font-family: 'Open Sans', arial;
-    border-radius: 20px;
-}
-.sign-btn:focus, .sign-btn:hover{
-    -webkit-animation: linear 1.2s light infinite;
-    -moz-animation: linear 1.2s light infinite;
-    -o-animation: linear 1.2s light infinite;
-    animation: linear 1.2s light infinite;
-    outline: none;
-}
-.sign-btn:active{
-    color: rgb(87, 212, 93);
-    text-shadow: 0px -1px 0px rgb(56, 56, 56),0px 0px 5px rgb(230, 230, 199 rgb(87, 212, 93) 0px 8px rgb(87, 212, 93));
-    box-shadow: 0px 1px 0px rgb(85, 85, 85),0px 2px 0px rgb(49, 49, 49),0px 2px 2px rgba(0, 0, 0, .9);
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation: none;
-    animation: none;
-}
-.down-menu>button{
-    height: 70%;
-    width: 100px;
-    font-size: 99%;
-    margin-left: 2%;
-    border-radius: 0px;
-    border: none;
-    background-color: rgb(49, 49, 49);
-    color: rgb(87, 212, 93);
-    font-family: 'Open Sans', arial;
-    border-radius: 20px;
-}
-.down-menu>button:focus, .down-menu>button:hover{
-    -webkit-animation: linear 1.2s light infinite;
-    -moz-animation: linear 1.2s light infinite;
-    -o-animation: linear 1.2s light infinite;
-    animation: linear 1.2s light infinite;
-    outline: none;
-}
-.down-menu>button:active{
-    color: rgb(87, 212, 93);
-    text-shadow: 0px -1px 0px rgb(56, 56, 56),0px 0px 5px rgb(230, 230, 199 rgb(87, 212, 93) 0px 8px rgb(87, 212, 93));
-    box-shadow: 0px 1px 0px rgb(85, 85, 85),0px 2px 0px rgb(49, 49, 49),0px 2px 2px rgba(0, 0, 0, .9);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -o-transform: translateY(3px);
+    transform: translateY(3px);
     -webkit-animation: none;
     -moz-animation: none;
     -o-animation: none;
@@ -513,7 +439,7 @@ body { /*Убирает отступ по краям экрана*/
 #nav-genres {
 
     height: 60px;
-    width: 97%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -537,6 +463,9 @@ body { /*Убирает отступ по краям экрана*/
     color: rgb(87, 212, 93);
     font-size: 99%;
 }
+.nav-btn:hover{
+    
+}
     a.nav-btn:hover, a.nav-btn:focus{
     -webkit-animation: linear 1.2s light infinite;
     -moz-animation: linear 1.2s light infinite;
@@ -558,12 +487,12 @@ body { /*Убирает отступ по краям экрана*/
 }
 .line {
     border-radius: 5px;
-    top: 75px;
 
     height: 3px;
-    width: 100%;
+    width: 95%;
     background: rgb(47, 47, 47);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;margin-right: auto;
 }
 
   /*
@@ -600,105 +529,68 @@ body { /*Убирает отступ по краям экрана*/
     position: fixed;
     background-repeat: no-repeat;
     z-index: 1;
-}
-.film-picture{
-    margin: 0 0 0 0;
-    width: 30%;
-    height: 200px;
-    border: 1px solid black;
-}
-.film-content{
-    margin: 0 0 0 0;
-    width: 70%;
-    height: 200px;
-    border: 1px solid black;
-}
-.main-content{
-    width: 100%;
-    height: 100%;
-  
+}*/
+
+
+.main-container div:first-child{
+    width: 97%;
+    height: 85px;
     display: flex;
     flex-direction: row;
-
+    align-items: center;
+    justify-content: space-between;
 }
-.main-content div:last-child{
-    width: 70%;
-    height: 100%;
-}
-.main-content div:first-child{
-    width: 30%;
-    height: 100%;
-}
-table{
-    width: 100%;
-}*/
-.main-content{
-    width: 100%;
-    height: 100%;
-   
-}
-
-.main-content .block{
-    width: 45%;
-    height: 200px;
-    background-color: wheat;
-    border: 1px solid black;
-    border-radius:20px ;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 1%;
-    display: inline-flex;
-    flex-direction: row;
-    
-}
-
-
-.main-content div div{
-    width: 75%;
-    height: 100%;
+.main-container div:first-child div{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
     border: 1px solid red;
-    margin-left: auto;
+    margin-left: 2%;
+   background-image: url(../../images/images-posters/Akame_ga_Kill.jpg);
+    background-repeat: no-repeat;
+    background-size: 104px auto;
+
+
+    
+    /*
+    background-attachment: fixed;
+    background-position: center;
+    */
+}
+.main-container div:first-child div img{
+    width: 100%;
+}
+.main-container div:first-child p{
+    width: 400px;
+    
+    font-size: 200%;
+}
+video{
+  width: 100%;
+  height: 100%;
+}
+iframe{
+  
   
 }
-.main-content div img{
-   
- height: 100%;
+.main-container section{
+    border: 1px solid red;
+    width: 60%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.main-content div a{
-    height: 90%;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 1%;
-}
-.main-content div div  p{
-    font-size: 80%;
- 
-}
-.main-content div div button{
-    width: 100px;
-    height: 30px;
-    margin-bottom: 2%;
-}
-
-
-
-
-
-
-
-
-
-.none{
-    display: none;
-}
-.main-content .serial-none{
-    display: none;
-}
-.main-content .film-none{
-    display: none;
-}
-.main-content .film-none div:first-child img{
-    display: none;
+.main-container div:nth-child(3){
+    border: 1px solid rgb(48, 136, 99);
+    width: 60%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -718,14 +610,36 @@ table{
 
 
 
+/*table .film-picture{
+    margin: 0 0 0 0;
+    width: 15%;
+    border: 1px solid black;
+    display: inline-flex;
+    
+}
+table .film-content{
+    margin: 0 0 0 0;
+    width: 40%;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    display: inline-flex;
+}
 
-
-
-
-
-
-
-
-
-
+table tr td{
+    height: 200px
+}
+table{
+    width: 97%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+table .film-picture img{
+    width: 97%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+} */
 

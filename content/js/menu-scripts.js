@@ -26,15 +26,15 @@ const body = document.body;
 const container = document.querySelector('.main-container');
 let link1 = document.querySelector('#a');
 // console.log(link1.getAttribute('href'));
-link1.setAttribute('href', 'style/light-theme.css')
+link1.setAttribute('href', '../style/light-theme.css')
 
 changeTheme.addEventListener('click', (Event) =>{
-   if(link1.getAttribute('href') == 'style/dark-theme.css'){
-        link1.setAttribute('href', 'style/light-theme.css');
+   if(link1.getAttribute('href') == '../style/dark-theme.css'){
+        link1.setAttribute('href', '../style/light-theme.css');
         changeTheme.classList.toggle('active');
    }
    else{
-       link1.setAttribute('href', 'style/dark-theme.css');
+       link1.setAttribute('href', '../style/dark-theme.css');
        changeTheme.classList.toggle('active');
    }
 });
@@ -82,16 +82,15 @@ menuBurger2.addEventListener('click', (Event) => {
     }
 });
 
+//$('.nav-btn-anime').on('click', function () {
+//    $('.block').toggleClass('film none');});
 
 
 
-//const anime = document.querySelector('#anime').classList;
-//const film = document.querySelector('#film').classList;
-//const serial = document.querySelector('#serial').classList;
-//document.querySelector('.nav-btn-anime').addEventListener('click', function() {
-    
-  //  film.toggle('block');
-    //film.toggle('none');
-    
-    
-  //});
+function anime(){
+
+    $('.block').toggleClass('serial none');
+}
+
+
+
